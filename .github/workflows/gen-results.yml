@@ -34,6 +34,5 @@ jobs:
         with:
           name: homework
           path: math-homework.txt
-
-  call-workflow:
-    uses: ./.github/workflows/display-results.yml
+      - name: Call Action for displaying results
+        uses: ./.github/workflows/display-results.yml
