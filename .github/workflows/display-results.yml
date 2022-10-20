@@ -4,9 +4,8 @@ on:
   workflow_call: {}
 
 jobs:
-  job_3:
+  display_results:
     name: Display results
-    needs: job_2
     runs-on: macOS-latest
     steps:
       - name: Download math result for job 2
