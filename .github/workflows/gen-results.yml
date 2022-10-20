@@ -38,5 +38,4 @@ jobs:
   job_3:
     name: Call display results workflow
     needs: job_2
-    runs-on: ubuntu-latest
     uses: ./.github/workflows/display-results.yml
