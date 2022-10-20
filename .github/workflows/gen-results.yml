@@ -1,4 +1,4 @@
-name: Share data between jobs
+name: Do some math and generate a result
 
 on: [push]
 
@@ -35,17 +35,5 @@ jobs:
           name: homework
           path: math-homework.txt
 
-  job_3:
-    name: Display results
-    needs: job_2
-    runs-on: macOS-latest
-    steps:
-      - name: Download math result for job 2
-        uses: actions/download-artifact@v3
-        with:
-          name: homework
-      - name: Print the final result
-        shell: bash
-        run: |
-          value=`cat math-homework.txt`
-          echo The result is $value
+  call-workflow:
+    uses: github.com/richscott/gha-artifacts-test/.github/workflows/display-results.yml
