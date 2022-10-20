@@ -34,4 +34,5 @@ jobs:
         with:
           name: homework
           path: math-homework.txt
+  job_3:
     uses: ./.github/workflows/display-results.yml
