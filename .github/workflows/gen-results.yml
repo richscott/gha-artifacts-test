@@ -36,4 +36,4 @@ jobs:
           path: math-homework.txt
 
   call-workflow:
-    uses: github.com/richscott/gha-artifacts-test/.github/workflows/display-results.yml@main
+    uses: ./.github/workflows/display-results.yml@main
