@@ -19,7 +19,7 @@ jobs:
   job_2:
     name: Multiply by 9
     needs: job_1
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Download math result for job 1
         uses: actions/download-artifact@v3
@@ -34,7 +34,4 @@ jobs:
         with:
           name: homework
           path: math-homework.txt
-      - name: Check out repository
-        uses: actions/checkout@v3
-      - name: Call Action for displaying results
-        uses: ./.github/workflows/display-results.yml
+    uses: ./.github/workflows/display-results.yml
