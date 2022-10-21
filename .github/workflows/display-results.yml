@@ -6,10 +6,10 @@ on:
 jobs:
   display_results:
     name: Display results
-    runs-on: macOS-latest
+    runs-on: ubuntu-latest
     steps:
-      - name: Download math result for job 2
-        uses: actions/download-artifact@v3
+      - name: Download math result from caller
+        uses: actions/download-artifact@v3.0.1
         with:
           name: homework
       - name: Print the final result
